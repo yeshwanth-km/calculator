@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="calculator-container">
+    <h1>JavaScript Calculator</h1>
+    
+    <!-- Light/Dark Mode Toggle -->
+    <div class="mode-toggle">
+      <label class="switch">
+        <input type="checkbox" id="mode-toggle" onclick="toggleMode()">
+        <span class="slider"></span>
+      </label>
+      <span id="mode-label">Light Mode</span>
+    </div>
+
+    <table id="calcu">
+      <tr>
+        <td colspan="4"><input type="text" id="result" readonly></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="7" onclick="dis('7')" class="number"></td>
+        <td><input type="button" value="8" onclick="dis('8')" class="number"></td>
+        <td><input type="button" value="9" onclick="dis('9')" class="number"></td>
+        <td><input type="button" value="/" onclick="dis('/')" class="operator"></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="4" onclick="dis('4')" class="number"></td>
+        <td><input type="button" value="5" onclick="dis('5')" class="number"></td>
+        <td><input type="button" value="6" onclick="dis('6')" class="number"></td>
+        <td><input type="button" value="*" onclick="dis('*')" class="operator"></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="1" onclick="dis('1')" class="number"></td>
+        <td><input type="button" value="2" onclick="dis('2')" class="number"></td>
+        <td><input type="button" value="3" onclick="dis('3')" class="number"></td>
+        <td><input type="button" value="-" onclick="dis('-')" class="operator"></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="0" onclick="dis('0')" class="number"></td>
+        <td><input type="button" value="." onclick="dis('.')" class="number"></td>
+        <td><input type="button" value="=" onclick="solve()" class="operator"></td>
+        <td><input type="button" value="+" onclick="dis('+')" class="operator"></td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <input type="button" value="C" onclick="clr()" class="clear-btn">
+          <input type="button" value="History" onclick="toggleHistory()" class="history-btn">
+        </td>
+      </tr>
+    </table>
+    <div id="history" class="history-container"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
